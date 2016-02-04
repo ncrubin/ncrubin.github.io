@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Variational 2-RDM on Models of Antiferromagnets - Nicholas Rubin</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/variational-2-rdm-on-models-of-antiferromagnets.html">
+
+        <meta name="author" content="Nicholas C Rubin" />
+        <meta name="description" content="In 2014 David Mazziotti and I published a paper on the performance of approximate N-representability at capturing the electronic structure of the Hubbard model on linear and ladder lattices for a range of interaction parameters. The ground state 2-RDM is calculated with variational 2-RDM with two sets of approximate N-representability ..." />
+
+        <meta property="og:site_name" content="Nicholas Rubin" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Variational 2-RDM on Models of Antiferromagnets"/>
+        <meta property="og:url" content="/variational-2-rdm-on-models-of-antiferromagnets.html"/>
+        <meta property="og:description" content="In 2014 David Mazziotti and I published a paper on the performance of approximate N-representability at capturing the electronic structure of the Hubbard model on linear and ladder lattices for a range of interaction parameters. The ground state 2-RDM is calculated with variational 2-RDM with two sets of approximate N-representability ..."/>
+        <meta property="article:published_time" content="2016-02-03" />
+            <meta property="article:section" content="Science" />
+            <meta property="article:author" content="Nicholas C Rubin" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.lumen.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+Nicholas Rubin            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="/pages/about.html">About</a></li>
+                    <li><a href="/category/Science.html">Science</a></li>
+                    <li><a href="/category/Programming.html">Programming</a></li>
+                    <li><a href="/category/Blog.html">Blog</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/variational-2-rdm-on-models-of-antiferromagnets.html"
+                       rel="bookmark"
+                       title="Permalink to Variational 2-RDM on Models of Antiferromagnets">
+                        Variational 2-RDM on Models of Antiferromagnets
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-02-03T16:05:00-06:00"> Wed 03 February 2016</time>
+    </span>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>In 2014 David Mazziotti and I published a paper on the performance of approximate
+N-representability at capturing the electronic structure of the Hubbard model
+on linear and ladder lattices for a range of interaction parameters.  </p>
+<p><img src="/images/LinLadderHubbard/2x4_M4_DQGT.jpg" style="width: 300px;"/></p>
+<p>The ground state 2-RDM is calculated
+with variational 2-RDM with two sets of approximate N-representability.  We
+validate the approximate N-representability by comparing the electronic
+structure probed with charge-order (<span class="math">\(\langle
+\hat{n}_{i\alpha}\hat{n}_{i+R,\beta}\rangle\)</span>), effective transport, and orbital
+occupation numbers compared against the exact solution (FCI).</p>
+<p><img src="/images/LinLadderHubbard/Cr2_2x10_M10_DQGT.jpg" style="width: 300px;"/></p>
+<p>This was my first successful project with variational 2-RDM theory and the
+first steps towards simulating the electronic structure of strongly correlated materials.</p>
+<p><a href="/pdfs/1404.5228v1.pdf">Read More</a></p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://www.linkedin.com/in/rubinnc"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+                <li class="list-group-item"><a href="https://github.com/ncrubin"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
+              </ul>
+            </li>
+
+
+
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://mazziotti.uchicago.edu/" target="_blank">
+                Mazziotti Group
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Nicholas C Rubin
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>
