@@ -47,9 +47,8 @@ Nicholas Rubin            </a>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                     <li><a href="/pages/about.html">About</a></li>
-                    <li><a href="/category/Science.html">Science</a></li>
-                    <li><a href="/category/Programming.html">Programming</a></li>
-                    <li><a href="/category/Blog.html">Blog</a></li>
+                    <li><a href="/category/science.html">Science</a></li>
+                    <li><a href="/category/blog.html">Blog</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
@@ -65,26 +64,54 @@ Nicholas Rubin            </a>
         <div class="col-sm-9">
 
             <article>
+                <h2><a href="/electronic-structure-of-pairing-hamiltonians.html">Electronic Structure of Pairing Hamiltonians</a></h2>
+                <div class="summary"><p>Understanding high-temperature superconductivity (HTSC) has been a high-profile
+problem in condensed matter physics since the 1980's.  One unique feature of a
+superconducting system, regardless of its superconducting origin, is that the
+two-electron reduced density matrix (2-RDM) manifests a large eigenvalue proportional
+to the system size.  This makes the 2-RDM ...</p>
+                    <a class="btn btn-default btn-xs" href="/electronic-structure-of-pairing-hamiltonians.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/installing-csdp-611-on-mac-os-x-yosemite.html">Installing CSDP 6.1.1 on Mac OS X Yosemite</a></h2>
+                <div class="summary"><p>In this blog post I will demonstrate how I installed the most recent
+<a href="https://projects.coin-or.org/Csdp">CSDP</a> library.  The first difficulty is
+installing gfortran.  This can be accomplished by homebrew.  </p>
+<p>My homebrew put the contents of my brew into <code>/usr/local/Cellar</code>.  This folder
+contains gcc which contains the necessary <code>.dylib</code> libraries for ...</p>
+                    <a class="btn btn-default btn-xs" href="/installing-csdp-611-on-mac-os-x-yosemite.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/slack-variables-and-the-l1-norm-in-optimization-theory.html">Slack variables and the L1-norm in optimization theory</a></h2>
+                <div class="summary"><p>I recently came across a problem that I could formulate as a L1-norm
+minimization and it occured to me--right before I plugged the entire thing into 
+my favorite
+solver--that I didn't have an intuition for how to add slack variables
+and how to take care of inequalities and absolute ...</p>
+                    <a class="btn btn-default btn-xs" href="/slack-variables-and-the-l1-norm-in-optimization-theory.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/legendre-transforms.html">Legendre Transforms</a></h2>
+                <div class="summary"><p>While cleaning out my desk I came across a paper that was very helpful when taking thermodynamics my first year of graduate school.  The paper is titled, "Making Sense of the Legendre Transform" and is written by Zia, Redish, and Mckay (<a href="http://scitation.aip.org/content/aapt/journal/ajp/77/7/10.1119/1.3119512">AAPT</a>, <a href="http://arxiv.org/abs/0806.1147">Arxiv</a>).  As the title suggests, the paper is ...</p>
+                    <a class="btn btn-default btn-xs" href="/legendre-transforms.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="/variational-2-rdm-on-models-of-antiferromagnets.html">Variational 2-RDM on Models of Antiferromagnets</a></h2>
                 <div class="summary"><p>In 2014 David Mazziotti and I published a paper on the performance of approximate
 N-representability at capturing the electronic structure of the Hubbard model
 on linear and ladder lattices for a range of interaction parameters.  </p>
 <p><img src="/images/LinLadderHubbard/2x4_M4_DQGT.jpg" style="width: 300px;"/></p>
 <p>The ground state 2-RDM is calculated
-with variational 2-RDM with two sets of approximate N-representability ...</p>
+by the variational 2-RDM method using two sets of ...</p>
                     <a class="btn btn-default btn-xs" href="/variational-2-rdm-on-models-of-antiferromagnets.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/rrsdp.html">RRSDP</a></h2>
-                <div class="summary"><p>RRSDP is the name of the method that solves a semidefinite program by relaxing
-it to a non-linear program.  The method was
-originally  developed by Burer and Monteiro
-(<a href="http://link.springer.com/article/10.1007/s10107-002-0352-8">link</a>).  I have implemented (<a href="https://github.com/ncrubin/RRSDP">link</a>) the RRSDP method
-in python using the scipy L-BFGS minimizer as a tutorial for the RRSDP
-algorithm ...</p>
-                    <a class="btn btn-default btn-xs" href="/rrsdp.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -111,15 +138,6 @@ algorithm ...</p>
 
 
 
-    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
-      <ul class="list-group" id="links">
-        <li class="list-group-item">
-            <a href="http://mazziotti.uchicago.edu/" target="_blank">
-                Mazziotti Group
-            </a>
-        </li>
-      </ul>
-    </li>
     </ul>
 </section>
             </aside>
@@ -146,6 +164,23 @@ algorithm ...</p>
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="/theme/js/respond.min.js"></script>
 
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-73385134-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
 
 </body>
 </html>

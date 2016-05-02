@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Electronic Structure of Pairing Hamiltonians - Nicholas Rubin</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/electronic-structure-of-pairing-hamiltonians.html">
+
+        <meta name="author" content="Nicholas C Rubin" />
+        <meta name="description" content="Understanding high-temperature superconductivity (HTSC) has been a high-profile problem in condensed matter physics since the 1980&#39;s. One unique feature of a superconducting system, regardless of its superconducting origin, is that the two-electron reduced density matrix (2-RDM) manifests a large eigenvalue proportional to the system size. This makes the 2-RDM ..." />
+
+        <meta property="og:site_name" content="Nicholas Rubin" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Electronic Structure of Pairing Hamiltonians"/>
+        <meta property="og:url" content="/electronic-structure-of-pairing-hamiltonians.html"/>
+        <meta property="og:description" content="Understanding high-temperature superconductivity (HTSC) has been a high-profile problem in condensed matter physics since the 1980&#39;s. One unique feature of a superconducting system, regardless of its superconducting origin, is that the two-electron reduced density matrix (2-RDM) manifests a large eigenvalue proportional to the system size. This makes the 2-RDM ..."/>
+        <meta property="article:published_time" content="2016-05-02" />
+            <meta property="article:section" content="Science" />
+            <meta property="article:author" content="Nicholas C Rubin" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.lumen.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+Nicholas Rubin            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="/pages/about.html">About</a></li>
+                    <li><a href="/category/science.html">Science</a></li>
+                    <li><a href="/category/blog.html">Blog</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/electronic-structure-of-pairing-hamiltonians.html"
+                       rel="bookmark"
+                       title="Permalink to Electronic Structure of Pairing Hamiltonians">
+                        Electronic Structure of Pairing Hamiltonians
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-05-02T16:05:00-05:00"> Mon 02 May 2016</time>
+    </span>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Understanding high-temperature superconductivity (HTSC) has been a high-profile
+problem in condensed matter physics since the 1980's.  One unique feature of a
+superconducting system, regardless of its superconducting origin, is that the
+two-electron reduced density matrix (2-RDM) manifests a large eigenvalue proportional
+to the system size.  This makes the 2-RDM a good probe for when a system
+undergoes a superconducting transition.  To try to understand the
+basic ingredients of a Hamiltonian that exhibits HTSC David Mazziotti and I
+studied direct calculations of the 2-RDM for various model Hamiltonians that
+are known to have pair correlations.  </p>
+<p>The really exciting thing about this work is:</p>
+<p>1) The Hamiltonians we select are generated from products of one-body
+spin-operators.  This is exciting because we can directly see which types of
+two-body interactions are important.</p>
+<p>2) The Hamiltonian has only two-body terms which are projectors onto a
+<span class="math">\(\eta\)</span>-pairing state-space.  The basis functions that parameterize the
+eigenfunctions of the Hamiltonians are all pairing wave functions
+</p>
+<div class="math">\begin{align}
+\eta_{i}^{\dagger} = \hat{a}_{i\alpha}^{\dagger}\hat{a}_{i\beta}^{\dagger} 
+\end{align}</div>
+<div class="math">\begin{align}
+|\psi \rangle = \sum_{ n_{1} &lt; n_{2} &lt; ... &lt; n_{N/2} } c_{ n_{1} &lt; n_{2} &lt; ... &lt; n_{N/2} } \hat{\eta}_{n_{1}}^{\dagger}\hat{\eta}_{n_{2}}^{\dagger }... \hat{\eta}_{n_{N/2}}^{\dagger}|\rangle
+\end{align}</div>
+<p>This results in a diagonal 1-RDM for all Hamiltonains regardless of interaction
+parameters.  The diagonal entries are 
+proportional to the electron density on my lattice.  Because the 1-RDM contains
+zero information about the electronic structure of the system this class of
+Hamiltonians is a really nice test for electronic structure methods aimed at
+capturing strong electron correlation.</p>
+<p>Furthermore, because we have access to the 2-RDM we can calculate off-diagonal
+2-RDM "quantum correlation" functions corresponding to <span class="math">\(\eta\)</span>-pairing and
+superconductivity.  For example we can plot</p>
+<div class="math">\begin{align}
+\langle \hat{\eta}_{i}^{\dagger}\hat{\eta}_{i+R}\rangle
+\end{align}</div>
+<p>
+to see the structure of the off-diagonal order.</p>
+<p algin="center">
+<img src="/images/SCPairHam/Eta_1x16_DQGT_wFCI_ABCDlabel.jpg" style="width: 300px;"/>
+</p>
+
+<p>This figure was taken from our paper
+<a href="http://pubs.acs.org/doi/abs/10.1021/jp5130266">ref</a>. The labels A,B,C,D are labels for various Hamiltonian interaction parameters.  The details aren't really that important.  What is important is that for 'A' we have an <span class="math">\(\eta\)</span>-pairing correlation function that doesn't decay at long range--i.e. <span class="math">\(R = 8\)</span>.  For the other labeled points there is some degree of decay.  The "long-range" correlation frames Yang's idea of off-diagonal long-range order in a density matrix quite well.  </p>
+<p>For a long time I had difficulty conceptualizing what this means.  In fact, Yang means excatly what he says--Ahh the satisfaction of clear scientific writing.  The 2-RDM has elements that don't go to zero as you move away from the diagonal.  This structure in the density matrix maniefest one-large eigenvalue.  Another way to think about the large eigenvalue is to observe there is a periodicity in the matrix corresponding to one momentum--i.e. the off-diagonal density-matrix elements can be described by one linear-momentum.  This is why the eigenvalue that corresponds to that eigenfunction becomes large proportional to system size.  The underlying wave function reflects an interaction that has very long correlation length and a definite period.</p>
+<p>3) Despite the complexity of the Hamiltonian approximate 3-positivity
+constriants on the 2-RDM are sufficient for accurate energies and correlation
+functions.</p>
+<p><img src="/images/SCPairHam/Nrep_1x16_DQG_DQGT_FCI.jpg" style="width: 500px;"/></p>
+<p>As I mentioned earlier, this Hamiltonian is superb for testing methods designed
+to treat strong electron correlation.  DQG constraints are a work-horse set of
+constraints used in quantum chemistry.  Here we see that even when entanglement
+is maximal approximate 3-positivity (DQGT) constraints are sufficient for an
+accurate simulation of the ground state 2-RDM.  </p>
+<p><a href="http://pubs.acs.org/doi/abs/10.1021/jp5130266">Read More</a>.  reprint copy
+available upon request.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://www.linkedin.com/in/rubinnc"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+                <li class="list-group-item"><a href="https://github.com/ncrubin"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
+              </ul>
+            </li>
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Nicholas C Rubin
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-73385134-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+</body>
+</html>

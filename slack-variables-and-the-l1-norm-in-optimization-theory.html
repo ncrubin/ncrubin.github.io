@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Slack variables and the L1-norm in optimization theory - Nicholas Rubin</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/slack-variables-and-the-l1-norm-in-optimization-theory.html">
+
+        <meta name="author" content="Nicholas C Rubin" />
+        <meta name="description" content="I recently came across a problem that I could formulate as a L1-norm minimization and it occured to me--right before I plugged the entire thing into my favorite solver--that I didn&#39;t have an intuition for how to add slack variables and how to take care of inequalities and absolute ..." />
+
+        <meta property="og:site_name" content="Nicholas Rubin" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Slack variables and the L1-norm in optimization theory"/>
+        <meta property="og:url" content="/slack-variables-and-the-l1-norm-in-optimization-theory.html"/>
+        <meta property="og:description" content="I recently came across a problem that I could formulate as a L1-norm minimization and it occured to me--right before I plugged the entire thing into my favorite solver--that I didn&#39;t have an intuition for how to add slack variables and how to take care of inequalities and absolute ..."/>
+        <meta property="article:published_time" content="2016-03-26" />
+            <meta property="article:section" content="Blog" />
+            <meta property="article:author" content="Nicholas C Rubin" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.lumen.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+Nicholas Rubin            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="/pages/about.html">About</a></li>
+                    <li><a href="/category/science.html">Science</a></li>
+                    <li><a href="/category/blog.html">Blog</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/slack-variables-and-the-l1-norm-in-optimization-theory.html"
+                       rel="bookmark"
+                       title="Permalink to Slack variables and the L1-norm in optimization theory">
+                        Slack variables and the L1-norm in optimization theory
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-03-26T00:00:00-05:00"> Sat 26 March 2016</time>
+    </span>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>I recently came across a problem that I could formulate as a L1-norm
+minimization and it occured to me--right before I plugged the entire thing into 
+my favorite
+solver--that I didn't have an intuition for how to add slack variables
+and how to take care of inequalities and absolute values.  </p>
+<p>There are plenty of times when one could easily formulate an optimization
+problem with linear inequalities.  Now if you look up how to solve an LP you
+usually get the problem statement in standard form.  Therefore, one needs to
+transform the problem into that standard form--i.e. no linear inequalities...only
+variable positivity--to use the standard solvers.  Enter slack variables. </p>
+<p>Say you are given an inequality <span class="math">\(x \geq d\)</span>.  Your variable representing some
+amount of stuff must be above some constant threshold.  This can be relaxed to
+an equality by introducing an "excess" amoount<span class="math">\(s\)</span> and restricting this <span class="math">\(s\)</span> value
+to be non-negative <span class="math">\(s \geq 0\)</span>.
+</p>
+<div class="math">\begin{align}\label{geqslack}
+x = b + s
+\end{align}</div>
+<p>
+Taking a step back and looking at Eq. \ref{geqslack} we can now understand what
+our slack variable is doing.  <span class="math">\(s\)</span> is a continuous amount indicating any extra
+<span class="math">\(x\)</span> over the value <span class="math">\(d\)</span>.  If <span class="math">\(s\)</span> is restricted to be non-negative than the
+original inequality is satisfied automatically.  </p>
+<p>This idea can be applied to <span class="math">\(x \leq d\)</span>.  To relax the inequality to an
+equality with a slack variable we use the same ideas as above.  For this case any
+<span class="math">\(s\)</span> we add to <span class="math">\(x\)</span> should be equal to <span class="math">\(d\)</span>.
+</p>
+<div class="math">\begin{align}\label{leqslack}
+x + s = d\\
+s \geq 0
+\end{align}</div>
+<p>
+As we can from Eq. \ref{geqslack} and \ref{leqslack} the <span class="math">\(\leq\)</span> or <span class="math">\(\geq\)</span> 
+inequality will dictate the sign of our
+slack variable if it is added to the right-hand side of the equation.  </p>
+<p>Okay! Intuition built up!  On to absolute value!</p>
+<p>So let's consider the classic L1-norm minimziation problem of finding the
+minimium l1-norm residual
+</p>
+<div class="math">\begin{align}
+\min \sum_{i}^{m} |Ax_{i} - b|
+\end{align}</div>
+<p>
+Now the absolute value introduces a non-linearity.  We can use some ideas from
+above to remove the non-linearity at the cost of adding additional slack
+variables.  If <span class="math">\(Ax_{i} - b\)</span> is positive than we can pick some constant <span class="math">\(z\)</span> that
+</p>
+<div class="math">\begin{align}
+Ax_{i} - b \leq z
+\end{align}</div>
+<p>
+if its negative than
+</p>
+<div class="math">\begin{align}
+-Ax_{i} + b \leq z
+\end{align}</div>
+<p>
+In the original problem we wanted to minimize the sum of the norms so we need
+to minimize the <span class="math">\(z\)</span> values now to tighten the range of the <span class="math">\(Ax_{i} - b\)</span>.  This
+is obvious by examining the feasible region for a number line for the function
+<span class="math">\(|x| \leq z\)</span>.  Clearly, the feasible set is the range <span class="math">\([-z,z]\)</span>.  Therefore, you
+can think about the <span class="math">\(z\)</span> as the excess (or slack) in the inequalities that we
+introduced which defines the same feasible region as the absolute value.  If
+you seek to minimize the absoulte value you are seeking to minimize that
+feasible region constrained by your original function <span class="math">\(Ax - b\)</span>!.   Therefore,
+it is valid to remove the absolute value non-linearity with the addition of two
+new constraints.  </p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://www.linkedin.com/in/rubinnc"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+                <li class="list-group-item"><a href="https://github.com/ncrubin"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
+              </ul>
+            </li>
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Nicholas C Rubin
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-73385134-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+</body>
+</html>
