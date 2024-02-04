@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Software Projects - Nicholas Rubin</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/pages/software-projects.html">
+
+        <meta name="author" content="Nicholas C. Rubin" />
+        <meta name="description" content="OpenFermion &#34;OpenFermion is an open source library for compiling and analyzing quantum algorithms to simulate fermionic systems, including quantum chemistry.&#34; --openfermion.org From 2019-2022 I was the primary maintainer of the OpenFermion software project. The goal of the project was to produce an easy-to-use interface to electronic structure software and …" />
+
+    <meta property="og:site_name" content="Nicholas Rubin" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Software Projects"/>
+    <meta property="og:url" content="/pages/software-projects.html"/>
+    <meta property="og:description" content="OpenFermion &#34;OpenFermion is an open source library for compiling and analyzing quantum algorithms to simulate fermionic systems, including quantum chemistry.&#34; --openfermion.org From 2019-2022 I was the primary maintainer of the OpenFermion software project. The goal of the project was to produce an easy-to-use interface to electronic structure software and …" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.lumen.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/friendly.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+Nicholas Rubin            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="/pages/research-areas.html">
+                             Research Areas
+                          </a></li>
+                         <li class="active"><a href="/pages/software-projects.html">
+                             Software Projects
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content" class="body">
+        <h1 class="entry-title">Software Projects</h1>
+        
+        <div class="entry-content">
+            <h3>OpenFermion</h3>
+<p>"OpenFermion is an open source library for compiling and analyzing quantum algorithms to simulate fermionic systems, including quantum chemistry." --openfermion.org</p>
+<p>From 2019-2022 I was the primary maintainer of the OpenFermion software project.  The goal of the project was to produce an easy-to-use interface to electronic structure software and tools for performing quantum computations for chemical simulation. Details on functionality and usecases can be found in the <a href="https://arxiv.org/abs/1710.07629">release paper</a>.</p>
+<h3>The Fermionic Quantum Emulator</h3>
+<p>The Fermionic Quantum Emulator (FQE) is a light weight fermionic circuit simulator. The emulator uses number and projected spin quantum numbers to reduce the cost of simulating state evolutions under fermionic generators. [<a href="https://github.com/quantumlib/OpenFermion-FQE">Github</a>, <a href="https://arxiv.org/abs/2104.13944">Release Paper</a>] Recently, we released the FQE-MPS extension which preserves the FQE interface but performs approximate wavefunction evolution using matrix product states.  [<a href="https://github.com/qsimulate/MPS-FQE">Github</a>, <a href="https://arxiv.org/abs/2312.17657">Release Paper</a>]</p>
+<h3>QCPANOP</h3>
+<p><a href="https://github.com/ncrubin/qcpanop/tree/main">QCPANOP</a> (A panoply of quantum chemistry codes) is a place where I like to put toy electronic structure codes that I develop for my own research or interest. Currently, the library has various Hartree-Fock/SCF methods, perturbation theory, projective and unitary coupled cluster, tomography schemes, plane-wave SCF/DFT, an interface to v2RDM code in <a href="https://github.com/edeprince3">Hilbert</a>, and CI forces (gradients).</p>
+<h3>Qualtran</h3>
+<p><a href="https://github.com/quantumlib/Qualtran">Qᴜᴀʟᴛʀᴀɴ</a> (quantum algorithms translator) is a set of abstractions for representing quantum 
+programs and a library of quantum algorithms expressed in that language to support quantum 
+algorithms research. This library is currently under development and will be released mid year.  One of the main motivating factors for building this library is lowering the barrier of entry to fault tolerant quantum algorithm development and increasing the understandability and reproducibility of of quantum algorithms application papers (frequently our algorithms papers are close to 100 pages long because english is a terrible programming language).</p>
+        </div>
+    </section>
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://twitter.com/nick_c_rubin"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://scholar.google.com/citations?user=jxHYfTMAAAAJ&hl=en&authuser=2" target="_blank">Google Scholar</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://www.linkedin.com/in/rubinnc" target="_blank">LinkedIn</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://github.com/ncrubin" target="_blank">Github</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy;  Nicholas C. Rubin
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+
+
+
+</body>
+</html>
